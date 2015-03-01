@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 		<link rel='stylesheet' type='text/css' href='css/estilo.css' />
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
 	</head>
 	<body>
 		<article class="page">
@@ -19,7 +20,11 @@
 				</nav>
 			</header>
 			<section id="portfolio">
-
+				<ul class="slider">
+				  <li class="slide"><img src="images/banner1.png"></li>
+				  <li class="slide"><img src="images/banner1.png"></li>
+				  
+				</ul>
 			</section>
 			<section id="clipping">
 				
@@ -28,5 +33,19 @@
 				
 			</section>
 		</article>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $('.slider').bxSlider({
+			    minSlides: 1,
+			    maxSlides: 1,
+			    slideMargin: 10,
+			    slideHeight: 458
+			  });
+			});
+		</script>
 	</body>
 </html>
