@@ -11,11 +11,9 @@ body{
 	font-family: verdana, sans-serif;
 
 	article{
-		width: 1200px;
-		margin: 0 auto;
 
 		header{
-			@include zen-grid-item(12, 1);
+			@include zen-grid-item(8, 3);
 
 			height: 50px;
 			margin-top: 10px;
@@ -37,15 +35,16 @@ body{
 
 					li{
 						float: left;
-						padding: 13px 0;
+						padding: 15px 0;
 
 						a{
 							color: #fff;
 							text-decoration: none;
 							text-transform: uppercase;
 							border-right: 2px solid #363839;
-							padding: 0 20px;
+							padding: 0 13px;
 							display: block;
+							font-size: 12px;
 
 						}
 
