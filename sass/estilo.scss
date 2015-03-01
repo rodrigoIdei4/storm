@@ -1,0 +1,14 @@
+@import "zen-grids";
+$zen-column-count: 12;
+$zen-gutter-width: 10px;
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+body{
+	header{
+		@include zen-grid-item(12, 1);
+	}
+}
