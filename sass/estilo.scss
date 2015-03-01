@@ -85,6 +85,33 @@ body{
 		}
 		#clipping{
 			@include zen-grid-item(12, 1);
+			
+			clear: both;
+			background: #171717;
+
+			.noticia{
+				@include zen-grid-item(8, 3);
+				padding-top: 115px;
+				color: #fff;
+
+				.noticia-destaque{
+					@include zen-grid-item(6, 1);
+
+					h2{
+						font-size: 17px;
+					}
+					p{
+						font-size: 12px;
+						margin: 20px 0;
+					}
+				}
+				.controles{
+					@include zen-grid-item(1, 7);
+				}
+				.noticias{
+					@include zen-grid-item(5,8);
+				}
+			}
 		}
 	}
 }
