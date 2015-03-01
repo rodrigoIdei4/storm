@@ -8,7 +8,60 @@ $zen-gutter-width: 10px;
 	border: 0;
 }
 body{
-	header{
-		@include zen-grid-item(12, 1);
+	font-family: verdana, sans-serif;
+
+	article{
+		width: 1200px;
+		margin: 0 auto;
+
+		header{
+			@include zen-grid-item(12, 1);
+
+			height: 50px;
+			margin-top: 10px;
+			background: #000;
+			border-radius: 5px;
+
+			h1{
+				@include zen-grid-item(4, 1);
+				background: url(../images/logo.png) no-repeat 0 0;
+				text-indent: -9000em;
+				margin-top: 10px;
+				margin-left: 15px;
+			}
+			nav{
+				@include zen-grid-item(8, 5);
+
+				ul{
+					list-style: none;
+
+					li{
+						float: left;
+						padding: 13px 0;
+
+						a{
+							color: #fff;
+							text-decoration: none;
+							text-transform: uppercase;
+							border-right: 2px solid #363839;
+							padding: 0 20px;
+							display: block;
+
+						}
+
+						&:hover{
+								border-bottom: 3px solid #fff001;
+							}
+
+						&.last{
+							a{
+								border-right: none;
+							}
+						}
+					}
+				}
+				
+			}
+		}
 	}
 }
