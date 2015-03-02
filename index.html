@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 		<link rel='stylesheet' type='text/css' href='css/estilo.css' />
@@ -28,13 +28,8 @@
 			</section>
 			<section id="clipping">
 				<section class="noticia">
-					<section class="noticia-destaque">
-						<h2>Pequenas Empresas Grandes Negócios</h2>
-						<p>Ex-hacker brasileiro projeta miniaviões para encontrar carros roubados, vigiar fazendas e gerenciar o trânsito.</p>
-						<img src="images/foto-noticia.png" alt="Foto da primeira notícia" />
-						<p>O tempo não decide entre ensolarado, nublado e chuvoso na Ilha de Guaratiba — bairro do Rio de Janeiro a 45 km do centro. “É bom que a gente já vê se o aviãozinho se garante em qualquer clima”, diz o engenheiro Wanderley Abreu Júnior. É o primeiro teste oficial do seu Veículo Aéreo Não Tripulado (doravante, Vant). Quem olha não dá nada. O aeromodelo mede 1,60 m da ponta de uma asa à da outra e pesa 750 g, mas tem versões maiores — de 3,5 kg e de 20 kg. O design também não é o forte, mas isso não parece preocupar Abreu Júnior. Seu negócio não é fabricar as aeronaves, mas o sistema de câmeras e sensores infravermelhos que as transforma em robôs de vigilância e monitoramento de tráfego.</p>
-
-						<p>Os Vants desenvolvidos pelo brasileiro são bem diferentes daqueles que ficaram conhecidos por custarem milhões de dólares e participarem de ações militares como a Guerra do Afeganistão e a captura de Bin Laden. Fazem parte de uma nova leva de veículos mais baratos, com menos recursos e projetados para o uso civil. Abreu Júnior não está só. A polícia da Austrália já recomendou ao governo.</p>
+					<section class="noticia-destaque" ui-view="noticia-destaque">
+						
 					</section>
 					<section class="controles">
 						<div class="transparente"></div>
@@ -42,17 +37,12 @@
 							<li class="facebook"><a href="#">Facebook</a></li>
 							<li class="twitter"><a href="#">Twitter</a></li>
 						</ul>
-						<ul class="controls">
-							<li class="proximo"><a href="#">Próximo</a></li>
-							<li class="anterior"><a href="#">Anterior</a></li>
+						<ul class="controls" ui-view="controles">
+							
 						</ul>
 					</section>
-					<section class="noticias">
-						<ul>
-							<li><a href="#">O Globo Blogs - Inovação</a></li>
-							<li><a href="#" class="active">Pequenas Empresas Grandes Negócios</a></li>
-							<li><a href="#">Revista Galileu</a></li>
-						</ul>
+					<section class="noticias" ui-view="lista">
+						
 					</section>
 				</section>
 			</section>
@@ -88,6 +78,9 @@
 		</article>
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+		<script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+		<script src="js/app.js"></script>
 		<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 

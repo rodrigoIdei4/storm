@@ -204,7 +204,7 @@ body{
 								text-decoration: none;
 								color: #fff;
 
-								&:hover{
+								&:hover, &.active{
 									color: #ff0;
 								}
 							}
