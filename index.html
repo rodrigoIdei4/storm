@@ -61,12 +61,12 @@
 					<p>Envie-nos uma solicitação, dúvida, sugestão ou crítica. Nossa equipe responderá o contato o quanto antes.</p>
 				</div>
 				<div class="dados-contato">
-					<form action="" method="POST">
+					<form action="envia.php" method="POST">
 						<fieldset>
 							<p>Mande sua mensagem</p>
-							<p><input type="text" name="formName" id="nome" placeholder="seu nome" /></p>
-							<p><input type="email" name="formEmail" id="email" placeholder="seu e-mail" /></p>
-							<p><textarea name="formMsg" id="mensagem" placeholder="sua mensagem"></textarea></p>
+							<p><input type="text" name="formName" id="nome" placeholder="seu nome" required="required" /></p>
+							<p><input type="email" name="formEmail" id="email" placeholder="seu e-mail" required="required" /></p>
+							<p><textarea name="formMsg" id="mensagem" placeholder="sua mensagem" required="required"></textarea></p>
 							<p><input type="submit" id="send_message" value="Enviar" /></p>
 						</fieldset>
 					</form>
@@ -100,6 +100,6 @@
 			  });
 			});
 		</script>
-
+		
 	</body>
 </html>

@@ -85,6 +85,10 @@ body{
 					margin-top: 60px;
 				}
 
+				.bx-pager{
+					display: none;
+				}
+
 				.bx-controls-direction{
 					@include zen-grid-item(8, 3);
 
