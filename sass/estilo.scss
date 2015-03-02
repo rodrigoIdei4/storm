@@ -203,6 +203,67 @@ body{
 			@include zen-grid-item(12, 1);
 			clear: both;
 			background: #22415e;
+			padding-top: 105px;
+			color: #fff;
+
+			.chamada{
+				@include zen-grid-item(7, 4);
+				background: url("../images/bg-contato.png") no-repeat 0 0;
+				height: 115px;
+
+				p{
+					width: 653px;
+					margin-top: 18px;
+					text-align: center;
+				}
+			}
+			.dados-contato{
+				@include zen-grid-item(8, 3);
+				clear: both;
+
+				form{
+					@include zen-grid-item(6, 1);
+
+					p{
+						margin-bottom: 10px;
+					}
+
+					#nome, #email,#mensagem{
+						height: 34px;
+						border-radius: 5px;
+						padding: 0 5px;
+						width: 350px;
+					}
+					#mensagem{
+						height: 110px;
+						padding-top: 5px;
+					}
+					#send_message{
+						border-radius: 5px;
+						padding: 5px;
+						float: right;
+						margin-right: 30px;
+						color: #fff;
+					}
+				}
+				ul{
+					@include zen-grid-item(5, 8);
+					list-style: none;
+
+					li{
+						font-size: 13px;
+						margin-bottom: 40px;
+
+						span{
+							display: block;
+
+							&.cidade{
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
