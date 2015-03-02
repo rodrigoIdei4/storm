@@ -199,5 +199,10 @@ body{
 				}
 			}
 		}
+		#contato{
+			@include zen-grid-item(12, 1);
+			clear: both;
+			background: #22415e;
+		}
 	}
 }
