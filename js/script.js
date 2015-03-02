@@ -133,5 +133,23 @@ $(document).ready(function(){
     'posicao': -36,
     'start':true
   });
+
+  //Header flutuante
+
+  $(function(){
+    var navigations = $('#cabecalho'),
+    pos = navigations.offset();
+    $(window).scroll(function(){
+      if($(this).scrollTop() > pos.top+navigations.height() && navigations.hasClass('default')){
+        navigations.fadeOut('fast', function(){
+          $(this).removeClass('default').addClass('stabled').fadeIn('fast');
+        });
+      } else if($(this).scrollTop() <= pos.top && navigations.hasClass('stabled')){
+        navigations.fadeOut('fast', function(){
+          $(this).removeClass('stabled').addClass('default').fadeIn('fast');
+        });
+      }
+    });
+  });
   
 });
