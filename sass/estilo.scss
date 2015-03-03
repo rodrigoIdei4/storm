@@ -101,6 +101,18 @@ body{
 
 					position: relative;
 					margin-top: -15%;
+
+					.bx-next, .bx-next:hover{
+						background: url(../images/bt-proximo-ds.png) no-repeat 0 0;
+					}
+					.bx-prev, .bx-prev:hover{
+						background: url(../images/bt-anterior-ds.png) no-repeat 0 0;
+					}
+
+					a{
+						width: 38px;
+						height: 65px;
+					}
 				}
 			}
 		}
@@ -196,6 +208,10 @@ body{
 					@include zen-grid-item(4,9);
 
 					background: url(../images/bg-noticias.png) no-repeat 0 0;
+
+					p{
+						display: none;
+					}
 
 					ul{
 						list-style: none;
@@ -443,6 +459,13 @@ body{
 
     				.bx-controls-direction{
     					@include zen-grid-item(12, 1);
+
+    					.bx-next, .bx-next:hover{
+    						background: url(../images/bt-proximo-sp.png) no-repeat 0 0;
+    					}
+    					.bx-prev, .bx-prev:hover{
+    						background: url(../images/bt-anterior-sp.png) no-repeat 0 0;
+    					}
     				}
     			}
     		}
@@ -464,9 +487,49 @@ body{
     				.noticias{
     					@include zen-grid-item(12, 1);
     					position: absolute;
-    					top: -10px;
+    					top: 53px;
     					left: 0;
     					background: none;
+
+    				}
+
+    				&.smartphone{
+    					.noticias{
+	    					p{
+	    						margin-top: 10px;
+	    						background: #fff;
+	    						width: 100%;
+	    						display: block;
+	    						color: #000;
+	    					}
+	    					ul{
+	    						background: #fff;
+    							display: none;
+    							margin: 0;
+    							height: 80px;
+
+	    						li{
+	    							float: none;
+	    							width: 100%;
+	    							padding: 0;
+	    							margin-bottom: 10px;
+
+	    							
+	    							a{
+	    								border-right: none;
+	    								color: #000;
+
+	    								&:hover, &.active{
+	    									color: #ff0;
+	    								}
+	    							}
+	    						}
+	    					}
+	    					p:hover ~ ul, ul:hover{
+	    						display: block;
+	    						height: 80px;
+	    					}
+    					}
     				}
     			}
     		}

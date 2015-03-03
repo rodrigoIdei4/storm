@@ -65,7 +65,7 @@
 							
 						</ul>
 					</section>
-					<section class="noticias desktop" ui-view="lista">
+					<section class="noticias" ui-view="lista">
 						
 					</section>
 				</section>
@@ -126,6 +126,7 @@
 					$("nav").removeClass("desktop");
 					$(".noticia").removeClass("desktop");
 					$(".noticia").addClass("smartphone");
+
 
 					$("nav .menu-smartphone p").bind('touchstart mousedown', function(event){
 					    event.preventDefault();
