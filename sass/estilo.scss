@@ -281,7 +281,7 @@ body{
 		}
 	}
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 800px){
 	$zen-column-count: 4;
     body{
     	article{
@@ -347,6 +347,46 @@ body{
 					    top: -18px;
 				    }
 			    }
+    		}
+    		#portfolio{
+    			.bx-wrapper{
+    				margin: 0 auto;
+
+    				.bx-viewport{
+    					height: 153px !important;
+    				}
+
+    				.bx-controls-direction{
+    					@include zen-grid-item(12, 1);
+    				}
+    			}
+    		}
+    		#clipping{
+    			.noticia{
+    				@include zen-grid-item(12, 1);
+    				position: relative;
+
+    				.noticia-destaque{
+    					@include zen-grid-item(12, 1);
+
+    					img{
+    						width: 100%;
+    					}
+    				}
+    				.controles{
+    					display: none;
+    				}
+    				.noticias{
+    					@include zen-grid-item(12, 1);
+    					position: absolute;
+    					top: -10px;
+    					left: 0;
+    					background: none;
+    				}
+    			}
+    		}
+    		#contato{
+    			display: none;
     		}
     	}
     }
