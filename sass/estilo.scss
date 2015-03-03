@@ -281,3 +281,73 @@ body{
 		}
 	}
 }
+@media only screen and (max-width: 480px){
+	$zen-column-count: 4;
+    body{
+    	article{
+    		header{
+    			@include zen-grid-item(12, 1);
+
+    			h1{
+    				@include zen-grid-item(9, 1);
+    				background: url("../images/logo1.png") no-repeat 0 0;
+    			}
+
+    			.wrap {
+				    max-width: 100%;
+				    margin: 0;
+			    }
+
+			    .drop {
+				    height: 48px;
+				    position: relative;
+				    z-index: 1000;
+
+				    nav{
+	    				@include zen-grid-item(3, 10);
+
+	    				&.nav{
+					    	&.nav-aberta {
+							    position: relative;
+							    padding: 0 0 0.5em 0;
+							    height: 0;
+					    	}
+					     
+						    ul {
+							    padding: .5em;
+							    margin: 0;
+							    background: #444;
+
+							    li {
+								    margin: 0;
+								    padding: 0;
+								    display: block;
+								    border-bottom: 1px solid #FFF;
+							    
+							     
+								    a {
+									    padding: 0.5em 0 0.5em 0;
+									    display: block;
+									    color: #FFF;
+								    }
+							     
+								    &:last-child {
+								    	border-bottom:none;
+								    }
+							    }
+						    }
+						}
+	    			}
+	    			.nav-toggle {
+					    display: block;
+					    padding: .4em;
+					    margin: .5em 0;
+					    position: absolute;
+					    right: 10px;
+					    top: -18px;
+				    }
+			    }
+    		}
+    	}
+    }
+}

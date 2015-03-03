@@ -9,15 +9,19 @@
 		<article id="topo" class="page">
 			<header id="cabecalho" class="default">
 				<h1><a href="topo">Storm Security</a></h1>
-				<nav>
-					<ul>
-						<li class=""><a href="storm">Conheça a Storm</a></li>
-						<li class=""><a href="portfolio">Portfolio</a></li>
-						<li class=""><a href="produtos">Produtos</a></li>
-						<li class=""><a href="clipping">Clipping</a></li>
-						<li class="last"><a href="contato">Faça Contato</a></li>					
-					</ul>
-				</nav>
+				<div class="drop">
+					<nav class="nav nav-aberta">
+						<div class="wrap">
+							<ul class="listaNav">
+								<li class=""><a href="storm">Conheça a Storm</a></li>
+								<li class=""><a href="portfolio">Portfolio</a></li>
+								<li class=""><a href="produtos">Produtos</a></li>
+								<li class=""><a href="clipping">Clipping</a></li>
+								<li class="last"><a href="contato">Faça Contato</a></li>					
+							</ul>
+						</div>
+					</nav>
+				</div>
 			</header>
 			<section id="portfolio">
 				<ul class="slider">
@@ -92,6 +96,29 @@
 			    slideMargin: 10
 			  });
 			});
+
+			$(".nav").addClass("fechada");
+			$(".nav").after("<a href=\"#\" class=\"nav-toggle\">Menu</a>");
+			
+			$(".nav-toggle").click(function() {
+				var altura = $(".listaNav").height();
+				if($(".nav").hasClass("fechada")) {
+					$(".nav").animate({height:altura},{queue:false, duration:200}).removeClass("fechada");
+				}
+				else {
+					$(".nav").animate({height:"0px"},{queue:false, duration:200}).addClass("fechada");
+				}
+			});
+			
+			$(window).resize(function() {
+				var tamanhoViewport = $(window).width();
+				if (tamanhoViewport > 480) {
+					$(".nav").css("height","auto").addClass("fechada");
+				} else {
+					$(".nav").css("height","0px").addClass("fechada");
+				}
+			});
+
 		</script>
 		
 	</body>
