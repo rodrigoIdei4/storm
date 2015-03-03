@@ -43,6 +43,13 @@ body{
 			nav{
 				@include zen-grid-item(8, 5);
 
+				.menu-desktop{
+					display: block;
+				}
+				.menu-smartphone{
+					display: none;
+				}
+
 				ul{
 					list-style: none;
 
@@ -306,6 +313,81 @@ body{
 				    nav{
 	    				@include zen-grid-item(3, 10);
 
+	    				.menu-desktop{
+	    					display: none;
+	    				}
+	    				.menu-smartphone{
+	    					display: block;
+
+	    					p{
+	    						border-left: 2px solid #fff;
+	    						margin-top: 10px;
+	    						background: url(../images/item-menu.png) no-repeat 20px 5px;
+	    						text-indent: -9000em;
+	    						width: 40px;
+	    					}
+	    					ul{
+	    						display: none;
+	    						height: 210px;
+	    						z-index: 1000;
+	    						position: relative;
+	    						width: 184px;
+	    						margin-left: -105px;
+	    						padding: 18px 10px 0;
+	    						background: #000;
+
+	    						li{
+	    							float: none;
+	    							border-bottom: 1px solid #fff;
+	    							width: 160px;
+	    							padding: 5px 0;
+
+	    							&.endereco{
+	    								color: #fff;
+	    								font-size: 10px;
+	    								border-bottom: none;
+
+			    						span{
+											display: block;
+
+											&.cidade{
+												font-weight: bold;
+											}
+										}
+			    					}
+
+			    					&.idioma{
+			    						border-bottom: none;
+			    						margin-top: 15px;
+
+			    						.titulo{
+			    							color: #fff;
+			    							font-size: 10px;
+			    							float: left;
+			    							text-transform: uppercase;
+			    						}
+			    						.linguas{
+			    							float: right;
+
+			    							a{
+			    								float: left;
+			    								width: auto;
+			    								padding: 0 5px;
+			    							}
+			    						}
+			    					}
+
+	    							a{
+	    								border-right: none;
+	    							}
+	    						}
+	    					}
+	    					p:hover ~ ul, ul:hover{
+	    						display: block;
+	    						height: 210px;
+	    					}
+	    				}
+
 	    				&.nav{
 					    	&.nav-aberta {
 							    position: relative;
@@ -349,11 +431,14 @@ body{
 			    }
     		}
     		#portfolio{
+    			position: relative;
+    			z-index: 10;
+
     			.bx-wrapper{
     				margin: 0 auto;
 
     				.bx-viewport{
-    					height: 153px !important;
+    					height: 170px !important;
     				}
 
     				.bx-controls-direction{

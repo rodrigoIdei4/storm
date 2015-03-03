@@ -10,8 +10,8 @@
 			<header id="cabecalho" class="default">
 				<h1><a href="topo">Storm Security</a></h1>
 				<div class="drop">
-					<nav class="nav nav-aberta">
-						<div class="wrap">
+					<nav ui-view="menu">
+						<div class="wrap menu-desktop">
 							<ul class="listaNav">
 								<li class=""><a href="storm">Conheça a Storm</a></li>
 								<li class=""><a href="portfolio">Portfolio</a></li>
@@ -20,6 +20,26 @@
 								<li class="last"><a href="contato">Faça Contato</a></li>					
 							</ul>
 						</div>
+						<div class="wrap menu-smartphone">
+							<p>Menu</p>
+							<div class="transparente"></div>
+							<ul class="listaNav">
+								<li class=""><a href="storm">Conheça a Storm</a></li>
+								<li class=""><a href="portfolio">Portfolio</a></li>
+								<li class=""><a href="clipping">Clipping</a></li>
+								<li class="endereco">
+									<span class="cidade">Rio de Janeiro</span>
+									<span class="endereco">Av. Lúcio Costa 3400 - Sl 304, Barra da Tijuca<br />
+									Rio de Janeiro / RJ<br />
+									CEP 22630-010</span>
+									<span class="telefone">+55 (21) 3734-0695</span>
+								</li>
+								<li class="idioma">
+									<span class="titulo">Language</span><span class="linguas"><a href="#">EN</a><a href="#">PT</a></span>
+								</li>					
+							</ul>
+						</div>
+						
 					</nav>
 				</div>
 			</header>
@@ -45,7 +65,7 @@
 							
 						</ul>
 					</section>
-					<section class="noticias" ui-view="lista">
+					<section class="noticias desktop" ui-view="lista">
 						
 					</section>
 				</section>
@@ -97,25 +117,34 @@
 			  });
 			});
 
-			$(".nav").addClass("fechada");
-			$(".nav").after("<a href=\"#\" class=\"nav-toggle\">Menu</a>");
-			
-			$(".nav-toggle").click(function() {
-				var altura = $(".listaNav").height();
-				if($(".nav").hasClass("fechada")) {
-					$(".nav").animate({height:altura},{queue:false, duration:200}).removeClass("fechada");
-				}
-				else {
-					$(".nav").animate({height:"0px"},{queue:false, duration:200}).addClass("fechada");
-				}
-			});
+
 			
 			$(window).resize(function() {
 				var tamanhoViewport = $(window).width();
-				if (tamanhoViewport > 800) {
-					$(".nav").css("height","auto").addClass("fechada");
+				if (tamanhoViewport < 800) {
+					$("nav").addClass("smartphone");
+					$("nav").removeClass("desktop");
+					$(".noticia").removeClass("desktop");
+					$(".noticia").addClass("smartphone");
+
+					$("nav .menu-smartphone p").bind('touchstart mousedown', function(event){
+					    event.preventDefault();
+					    if ($("nav .menu-smartphone ul").hasClass("hide"))
+					    {
+					        $("nav .menu-smartphone ul").removeClass("hide");
+					        $("nav .menu-smartphone ul").addClass("show");
+					    }
+					    else{
+					        $("nav .menu-smartphone ul").removeClass("show");
+					        $("nav .menu-smartphone ul").addClass("hide");
+					    }
+
+					});
 				} else {
-					$(".nav").css("height","0px").addClass("fechada");
+					$("nav").addClass("desktop");
+					$("nav").removeClass("smartphone");
+					$(".noticia").removeClass("smartphone");
+					$(".noticia").addClass("desktop");
 				}
 			});
 

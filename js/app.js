@@ -6,7 +6,7 @@ App.config(function($stateProvider){
             views:{
                 "noticia-destaque"  : {templateUrl: "pages/noticia2.html"},
                 "controles"         : {templateUrl: "pages/controls-noticia2.html"},
-                "lista"    : {templateUrl: "pages/lista-noticias-2.html"}
+                "lista"             : {templateUrl: "pages/lista-noticias-2.html"}
             }
         })
         .state('noticia1', {
@@ -14,7 +14,7 @@ App.config(function($stateProvider){
             views:{
                 "noticia-destaque"  : {templateUrl: "pages/noticia1.html"},
                 "controles"         : {templateUrl: "pages/controls-noticia1.html"},
-                "lista"    : {templateUrl: "pages/lista-noticias-1.html"}
+                "lista"             : {templateUrl: "pages/lista-noticias-1.html"}
             }
         })
         .state('noticia2', {
@@ -22,7 +22,7 @@ App.config(function($stateProvider){
             views:{
                 "noticia-destaque"  : {templateUrl: "pages/noticia2.html"},
                 "controles"         : {templateUrl: "pages/controls-noticia2.html"},
-                "lista"    : {templateUrl: "pages/lista-noticias-2.html"}
+                "lista"             : {templateUrl: "pages/lista-noticias-2.html"}
             }
         })
 });
